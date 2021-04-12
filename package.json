@@ -1,0 +1,27 @@
+{
+  "name": "db2-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "serve": "nodemon app.js",
+    "scss": "npm run scss-index && npm run scss-sign-in && npm run scss-sign-up && npm run scss-admin",
+    "scss-index": "node-sass src/sass/index.sass src/public/css/index.css",
+    "scss-sign-in": "node-sass src/sass/sign-in.sass src/public/css/sign-in.css",
+    "scss-sign-up": "node-sass src/sass/sign-up.sass src/public/css/sign-up.css",
+    "scss-admin": "node-sass src/sass/admin.sass src/public/css/admin.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^7.0.1",
+    "node-sass": "^5.0.0",
+    "nunjucks": "^3.2.3"
+  }
+}

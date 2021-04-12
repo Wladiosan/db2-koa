@@ -1,0 +1,148 @@
+@import "header-sign"
+
+.content.sign-up
+  display: flex
+
+  .form
+    margin: 5% auto auto
+    padding: 50px 10% 80px
+    min-width: 290px
+    background: #ffffff
+    box-shadow: 0 5px 40px rgba(0, 45, 113, 0.06)
+    border-radius: 10px
+
+    &__surname
+      display: flex
+      justify-content: space-between
+
+      & input
+        &:first-child
+          margin-right: 5px
+
+    &__title
+      font-family: 'Exo 2', sans-serif
+      font-size: 28px
+      font-style: normal
+      font-weight: 600
+      text-align: left
+      padding-bottom: 20px
+      color: #002396
+
+    &__input
+      margin-top: 13px
+      padding-left: 10px
+      height: 40px
+      width: 100%
+      font-family: 'Roboto', sans-serif
+      font-size: 14px
+      font-style: normal
+      font-weight: 400
+      background: #FCFCFC
+      border: 2px solid #f2f2f2
+      border-radius: 2px
+      text-align: left
+      color: #222428
+
+    &__input:focus
+      outline: none
+      border-left: 4px solid #2a74db
+
+    &__btn
+      display: flex
+      justify-content: flex-end
+
+    &__checkbox
+      margin-top: 5px
+      padding: 5px
+      font-family: 'Roboto', sans-serif
+      font-style: normal
+      font-size: 14px
+      line-height: 16px
+      color: #222428
+      height: 40px
+      display: flex
+      align-items: center
+      font-weight: 300
+
+      & input
+        display: none
+
+      & span
+        &:last-child
+          font-weight: 500
+          color: #002396
+          margin-left: 5px
+
+  .content-forgot a
+    color: #222428
+
+  .btn
+    margin-top: 15px
+    width: 188px
+    height: 43px
+    background: #0AD69C
+    border: none
+    border-radius: 2px
+    font-family: 'Exo 2', sans-serif
+    font-style: normal
+    font-size: 16px
+    line-height: 19px
+    font-weight: 600
+    color: #FFFFFF
+    cursor: pointer
+
+    &:focus
+      outline: none
+
+    &:active
+      box-shadow: 2px 2px 5px #222428
+
+  .pass-level
+    display: flex
+    justify-content: space-between
+    height: 6px
+
+    & span
+      background: #ebeff3
+      flex-grow: 1
+      max-width: 33%
+      border-radius: 5px
+
+    & .pass-level__bad
+      background: #FF6359
+
+    & .pass-level__norm
+      background: #FFB966
+
+    & .pass-level__good
+      background: #38ECAC
+
+  label
+    cursor: pointer
+    font-weight: normal
+
+    &:before
+      margin-right: 10px
+      content: " "
+      display: inline-block
+      font: 20px/30px Arial
+      text-align: center
+      width: 24px
+      height: 24px
+      background: rgba(245, 247, 250, 0.5)
+      border: 2px solid #F2F2F2
+      border-radius: 2px
+
+  input:checked + label:before
+    padding-bottom: 5px
+    color: #0AD69C
+    content: '\2714'
+
+.sign-up-one
+  .form__input
+    margin-bottom: 13px
+
+.sign-up-two
+  .form__input
+    margin-bottom: 5px
+

@@ -1,0 +1,15 @@
+{% set title = 'myFixer.com' %}
+{% set question = 'Do not have an account?' %}
+{% set offer = 'Sign up' %}
+{% extends "base-for-sign.njk" %}{% block content %}
+    <div class="content sign-in">
+        <form class="form">
+            <div class="form__title">Reset your password</div>
+            <input type="password" class="form__input" placeholder="New password"/>
+            <input type="password" class="form__input" placeholder="Confirm password"/>
+            <div class="form__btn">
+                <button class="btn">Sign in</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

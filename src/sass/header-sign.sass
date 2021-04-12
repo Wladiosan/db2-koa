@@ -1,0 +1,33 @@
+@import "media-size"
+
+.header
+  &.header-for-sign
+    padding: 15px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+  &__left
+    display: flex
+    flex-direction: row
+    align-items: center
+  &__right
+    @media screen and (min-width: $xl)
+      display: flex
+      flex-direction: row
+      font-family: 'Roboto', sans-serif
+    &-text
+      display: none
+      @media screen and (min-width: $xl)
+        display: flex
+        margin-right: 5px
+        font-size: 16px
+        font-weight: 300
+        line-height: 18px
+        font-style: normal
+        color: #222428
+    &-link a
+      font-weight: 700
+      color: #2A74DB
+  .logo-img
+    margin-right: 5px

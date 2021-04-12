@@ -1,0 +1,80 @@
+@import "media-size"
+@import "header-sign"
+
+.content.sign-in
+  display: flex
+  .form
+    margin: 5% auto auto
+    padding: 50px 10% 80px
+    min-width: 290px
+    background: #ffffff
+    box-shadow: 0 5px 40px rgba(0, 45, 113, 0.06)
+    border-radius: 10px
+    @media screen and (min-width: $sm) and (max-width: $md - 1)
+      width: 100%
+      min-width: 396px
+    @media screen and (min-width: $md) and (max-width: $lg - 1)
+      width: 632px
+      padding: 70px 115px 80px
+    @media screen and (min-width: $lg) and (max-width: $xl - 1)
+      width: 632px
+      padding: 70px 115px 80px
+    @media screen and (min-width: $xl)
+      width: 632px
+      padding: 70px 115px 80px
+    &__title
+      font-family: 'Exo 2', sans-serif
+      font-size: 28px
+      font-style: normal
+      font-weight: 600
+      text-align: left
+      padding-bottom: 20px
+      color: #002396
+    &__input
+      margin-top: 13px
+      margin-bottom: 13px
+      padding-left: 10px
+      height: 40px
+      width: 100%
+      font-family: 'Roboto', sans-serif
+      font-size: 14px
+      font-style: normal
+      font-weight: 400
+      background: #FCFCFC
+      border: 2px solid #f2f2f2
+      border-radius: 2px
+      text-align: left
+      color: #222428
+      &:focus
+        outline: none
+        border-left: 4px solid #2a74db
+    &__forget
+      margin-top: 15px
+      font-family: 'Roboto', sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      text-align: right
+    &__btn
+      display: flex
+      justify-content: flex-end
+  .content-forgot a
+    color: #222428
+  .btn
+    margin-top: 15px
+    width: 188px
+    height: 43px
+    background: #0AD69C
+    border: none
+    border-radius: 2px
+    font-family: 'Exo 2', sans-serif
+    font-style: normal
+    font-size: 16px
+    line-height: 19px
+    font-weight: 600
+    color: #FFFFFF
+    cursor: pointer
+    &:focus
+      outline: none
+    &:active
+      box-shadow: 2px 2px 5px #222428

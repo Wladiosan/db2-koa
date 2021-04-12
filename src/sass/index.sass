@@ -1,0 +1,27 @@
+@import "media-size"
+@import "header-sign"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+a, a:hover, a:active
+  text-decoration: none
+  color: #000
+
+body
+  background-color: #F9FAFC
+
+.container
+  margin: 0 auto
+  padding: 0 15px
+  min-width: 320px
+  @media screen and (min-width: $sm) and (max-width: $md - 1)
+    min-width: 426px
+  @media screen and (min-width: $md) and (max-width: $lg - 1)
+    min-width: 769px
+  @media screen and (min-width: $lg) and (max-width: $xl - 1)
+    min-width: 1025px
+  @media screen and (min-width: $xl)
+    max-width: 1170px

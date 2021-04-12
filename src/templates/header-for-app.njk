@@ -1,0 +1,18 @@
+{% macro headerRightAdmin() %}
+    <div class="header__right-img">
+        <img src="../assets/img/nav-logo.png" alt="nav-logo.png">
+    </div>
+    <div class="header__right-text">Sarah Freeman</div>
+    <div class="header__right-arrow"><a href="/"><i class="fas fa-chevron-down"></i></a></div>
+{% endmacro %}
+
+<header class="header header-for-app">
+    <div class="header__left">
+        <div class="header__left-text"><a href="/">{{ firstVar }}</a></div>
+        <div class="header__left-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="header__left-text"><a href="/">{{ secondVar }}</a></div>
+    </div>
+    <div class="header__right">
+        {{ headerRightAdmin() }}
+    </div>
+</header>

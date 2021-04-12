@@ -1,0 +1,156 @@
+.header.header-for-sign {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.header__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+@media screen and (min-width: 1200px) {
+  .header__right {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif; } }
+
+.header__right-text {
+  display: none; }
+  @media screen and (min-width: 1200px) {
+    .header__right-text {
+      display: flex;
+      margin-right: 5px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18px;
+      font-style: normal;
+      color: #222428; } }
+
+.header__right-link a {
+  font-weight: 700;
+  color: #2A74DB; }
+
+.header .logo-img {
+  margin-right: 5px; }
+
+.content.sign-up {
+  display: flex; }
+  .content.sign-up .form {
+    margin: 5% auto auto;
+    padding: 50px 10% 80px;
+    min-width: 290px;
+    background: #ffffff;
+    box-shadow: 0 5px 40px rgba(0, 45, 113, 0.06);
+    border-radius: 10px; }
+    .content.sign-up .form__surname {
+      display: flex;
+      justify-content: space-between; }
+      .content.sign-up .form__surname input:first-child {
+        margin-right: 5px; }
+    .content.sign-up .form__title {
+      font-family: 'Exo 2', sans-serif;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      text-align: left;
+      padding-bottom: 20px;
+      color: #002396; }
+    .content.sign-up .form__input {
+      margin-top: 13px;
+      padding-left: 10px;
+      height: 40px;
+      width: 100%;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      background: #FCFCFC;
+      border: 2px solid #f2f2f2;
+      border-radius: 2px;
+      text-align: left;
+      color: #222428; }
+    .content.sign-up .form__input:focus {
+      outline: none;
+      border-left: 4px solid #2a74db; }
+    .content.sign-up .form__btn {
+      display: flex;
+      justify-content: flex-end; }
+    .content.sign-up .form__checkbox {
+      margin-top: 5px;
+      padding: 5px;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #222428;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      font-weight: 300; }
+      .content.sign-up .form__checkbox input {
+        display: none; }
+      .content.sign-up .form__checkbox span:last-child {
+        font-weight: 500;
+        color: #002396;
+        margin-left: 5px; }
+  .content.sign-up .content-forgot a {
+    color: #222428; }
+  .content.sign-up .btn {
+    margin-top: 15px;
+    width: 188px;
+    height: 43px;
+    background: #0AD69C;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer; }
+    .content.sign-up .btn:focus {
+      outline: none; }
+    .content.sign-up .btn:active {
+      box-shadow: 2px 2px 5px #222428; }
+  .content.sign-up .pass-level {
+    display: flex;
+    justify-content: space-between;
+    height: 6px; }
+    .content.sign-up .pass-level span {
+      background: #ebeff3;
+      flex-grow: 1;
+      max-width: 33%;
+      border-radius: 5px; }
+    .content.sign-up .pass-level .pass-level__bad {
+      background: #FF6359; }
+    .content.sign-up .pass-level .pass-level__norm {
+      background: #FFB966; }
+    .content.sign-up .pass-level .pass-level__good {
+      background: #38ECAC; }
+  .content.sign-up label {
+    cursor: pointer;
+    font-weight: normal; }
+    .content.sign-up label:before {
+      margin-right: 10px;
+      content: " ";
+      display: inline-block;
+      font: 20px/30px Arial;
+      text-align: center;
+      width: 24px;
+      height: 24px;
+      background: rgba(245, 247, 250, 0.5);
+      border: 2px solid #F2F2F2;
+      border-radius: 2px; }
+  .content.sign-up input:checked + label:before {
+    padding-bottom: 5px;
+    color: #0AD69C;
+    content: '\2714'; }
+
+.sign-up-one .form__input {
+  margin-bottom: 13px; }
+
+.sign-up-two .form__input {
+  margin-bottom: 5px; }

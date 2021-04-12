@@ -1,0 +1,65 @@
+.header.header-for-sign {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.header__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+@media screen and (min-width: 1200px) {
+  .header__right {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif; } }
+
+.header__right-text {
+  display: none; }
+  @media screen and (min-width: 1200px) {
+    .header__right-text {
+      display: flex;
+      margin-right: 5px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18px;
+      font-style: normal;
+      color: #222428; } }
+
+.header__right-link a {
+  font-weight: 700;
+  color: #2A74DB; }
+
+.header .logo-img {
+  margin-right: 5px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a, a:hover, a:active {
+  text-decoration: none;
+  color: #000; }
+
+body {
+  background-color: #F9FAFC; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  min-width: 320px; }
+  @media screen and (min-width: 426px) and (max-width: 767px) {
+    .container {
+      min-width: 426px; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      min-width: 769px; } }
+  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+      min-width: 1025px; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1170px; } }

@@ -1,0 +1,19 @@
+{% set title = 'myFixer.com' %}
+{% set question = 'Already have an account?' %}
+{% set offer = 'Log in' %}
+{% extends "base-for-sign.njk" %}{% block content %}
+    <div class="content sign-up sign-up-one">
+        <form class="form">
+            <div class="form__title">Sign up</div>
+            <div class="form__surname">
+                <input type="text" class="form__input" placeholder="Name"/>
+                <input type="text" class="form__input" placeholder="Last name"/>
+            </div>
+            <input type="text" class="form__input" placeholder="Username"/>
+            <input type="password" class="form__input" placeholder="Password"/>
+            <div class="form__btn">
+                <button class="btn">Sign in</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
