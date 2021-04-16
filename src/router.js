@@ -3,6 +3,9 @@ const Router = require('koa-router')
 const router = new Router()
 const controller = require('./controller')
 
+router.get('user/:userId', controller.user)
+router.post('user', controller.createUser)
+
 router.get('/', controller.home)
 router.get('sign-in-one', controller.signInOne)
 router.get('sign-in-two', controller.signInTwo)

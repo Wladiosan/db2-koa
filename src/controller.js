@@ -1,3 +1,23 @@
+const db = require('./db/db')
+const validator = require('./validator')
+
+async function createUser(ctx) {
+    const {body} = ctx.request
+    await validator.schema.validateAsync(body)
+    const createUserResponse = await db.query(
+        `INSERT INTO "user"(fname, lname, isActive) VALUES('${body.fname}', '${body.lname}', ${body.active}) RETURNING *`)
+    const user = {...createUserResponse.rows[0]}
+
+    await ctx.redis.set(user.id, JSON.stringify(user))
+
+    ctx.status = 201
+    ctx.body = {
+        id: user.id,
+        fname: user.fname,
+        lname: user.lname
+    }
+}
+
 async function home(ctx) {
     await ctx.render('index', {
         title: 'myFixer.com',
@@ -86,6 +106,24 @@ async function signUpFive(ctx) {
     })
 }
 
+async function user(ctx) {
+    const {userId} = ctx.request.params
+    const userResponse = await db.query(`SELECT * FROM "user" WHERE id=${userId}`)
+
+    const userInRedis = await ctx.redis.get(userId)
+    console.log(JSON.parse(userInRedis))
+
+    if (!userResponse) ctx.throw(400, 'User doesn`t exist')
+
+    const name = userResponse.rows[0].fname
+    await ctx.render('user', {
+        name,
+        userId,
+        title: 'myFixer.com',
+        linkStyle: './public/css/index.css'
+    })
+}
+
 async function admin(ctx) {
     await ctx.render('admin', {
         title: 'myFixer.com',
@@ -98,6 +136,7 @@ async function admin(ctx) {
 }
 
 module.exports = {
+    createUser,
     home,
     signInOne,
     signInTwo,
@@ -108,5 +147,6 @@ module.exports = {
     signUpThree,
     signUpFour,
     signUpFive,
-    admin
+    user,
+    admin,
 }

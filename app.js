@@ -1,12 +1,31 @@
 const path = require('path')
 const Koa = require('koa')
+const bodyParser = require('koa-bodyparser');
 const Router = require('koa-router')
 const views = require('koa-views')
 const nunjucks = require('nunjucks')
 const globalRouter = require('./src/router')
 const serve = require('koa-static')
+const Redis = require('ioredis')
 
 const app = new Koa()
+
+const redis = new Redis()
+app.context.redis = redis
+
+app.use(bodyParser());
+app.use(async (ctx, next) => {
+    try {
+        await next()
+    } catch (err) {
+        if(err.isJoi) {
+            ctx.throw(400, err.details[0].message)
+        }
+        console.log(err)
+        ctx.throw(400, 'Something wrong')
+    }
+})
+
 const router = new Router()
 
 const port = process.env.PORT || 3005
